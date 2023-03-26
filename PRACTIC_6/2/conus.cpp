@@ -47,3 +47,12 @@ double conus::Area() {
 double conus::Volume() {
     return M_PI * radius * radius * height / 3;
 }
+
+std::ostream& operator<<(std::ostream& stream, conus obj) {
+    stream << "(" << obj.x << "; ";
+    stream << obj.y << "; ";
+    stream << obj.z << ") ";
+    stream << "r = " << obj.radius << " ";
+    stream << "h = " << obj.height << "\n";
+    return stream;
+}

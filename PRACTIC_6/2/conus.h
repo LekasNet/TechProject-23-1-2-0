@@ -5,13 +5,16 @@
 #ifndef PRACTIC_6_CONUS_H
 #define PRACTIC_6_CONUS_H
 
-class conus {
-    double x, y, z;
+#include <iostream>
 
+class conus {
+
+    double x, y, z;
     double radius;
     double height;
 
 public:
+
     conus();
 
     conus(double _radius, double _height);
@@ -25,6 +28,9 @@ public:
     double Area();
 
     double Volume();
+
+    friend std::ostream& operator<<(std::ostream& stream, conus obj);
+
 };
 
 #endif //PRACTIC_6_CONUS_H
